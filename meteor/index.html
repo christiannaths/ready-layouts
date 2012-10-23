@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title></title>
+
+  <link rel="stylesheet" href="layout.css">
+  <style type="text/css">
+    .panel, #main-nav a, header{ background: #ddd; }
+    .panel{ min-height: 200px; }
+  </style>
+</head>
+
+<body>
+
+  <header>
+  </header>
+
+  <nav id='main-nav'>
+    <h1>
+      <a href='#' id='toggle-navigation'>
+        <span class='text'>Main Menu</span>
+        <span class='icon-chevron-right'>></span>
+      </a>
+    </h1>
+    <ul>
+      <li>
+        <a href='#'>
+          <span class='text'>First Link</span>
+          <span class='icon-home'>1</span>
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <span class='text'>Second Link</span>
+          <span class='icon-file'>2</span>
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <span class='text'>Third Link</span>
+          <span class='icon-list'>3</span>
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <span class='text'>Fourth Link</span>
+          <span class='icon-user'>4</span>
+        </a>
+      </li>
+      <li>
+        <a href='#'>
+          <span class='text'>Fifth Link</span>
+          <span class='icon-cog'>5</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="full-column">
+    <div class="panel"></div>
+  </div>
+  <div class="main-column">
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+  </div>
+  <div class="secondary-column">
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+    <div class="panel"></div>
+  </div>
+
+
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('#toggle-navigation').on('click', function(){ $('body').toggleClass('nav-visible') });
+  </script>
+</body>
+</html>

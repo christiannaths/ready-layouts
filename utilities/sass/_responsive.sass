@@ -1,0 +1,10 @@
+$bp1: "(min-width: 481px)" !default
+$bp2: "(min-width: 769px)" !default
+$bp3: "(min-width: 1025px)" !default
+$bp4: "(min-width: 1281px)" !default
+$bp5: "(min-width: 1601px)" !default
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)" !default
+
+@mixin responds-to($device)
+  @media #{ $device }
+    @content

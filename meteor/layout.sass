@@ -1,0 +1,136 @@
+@import utilities/sass/all
+$nav-width: 200px
+
+*
+  +border-box
+
+html
+  height: 100%
+  width: 100%
+  overflow: hidden
+  overflow-y: auto
+  font: 16px/1.4 sans-serif
+
+body
+  overflow: hidden
+  position: relative
+  min-height: 600px
+  left: -#{ $nav-width }
+  margin: 0 -#{ $nav-width } 0 0
+  padding: 10px 10px 10px ($nav-width  +10px)
+  +prefix(transition, 0.2s all ease)
+
+  &.nav-visible
+    left: 0
+    margin-right: 0
+
+  +responds-to($bp1)
+    left: -140px
+    margin-right: -140px
+
+    &.nav-visible
+      left: 0
+      margin-right: 0px
+
+  +responds-to($bp3)
+    left: 0px
+    margin-right: 0px
+    padding:
+      left: ($nav-width  + 40px)
+      right: 40px
+
+
+.full-column
+  width: 100%
+  max-width: 1400px
+
+.main-column
+  width: 100%
+  +responds-to($bp2)
+    float: left
+    width: 60%
+    max-width: 840px
+    padding-right: 10px
+
+.secondary-column
+  width: 100%
+  +responds-to($bp2)
+    float: left
+    width: 40%
+    max-width: 560px
+
+.panel
+  padding: 20px
+  margin-bottom: 10px
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  h2
+    margin: 0
+
+
+header
+  max-width: 1400px
+  min-height: 42px
+  margin: 0px 0px 10px 60px
+
+  +responds-to($bp3)
+    min-height: 60px
+    margin-left: 0
+
+#toggle-navigation-link
+  display: inline-block
+  span.text
+    display: none
+
+#main-nav
+  position: absolute
+  top: 0
+  left: 0
+  width: $nav-width
+  margin-top: 10px
+  +prefix(transition, 0.2s all ease)
+
+  +responds-to($bp3)
+    margin-top: 80px
+
+  ul
+    margin: 0
+    padding: 0
+
+  li
+    display: inline
+
+  a
+    display: block
+    margin-bottom: 1px
+    padding: 10px
+
+
+  span.text
+    display: inline-block
+    width: #{ $nav-width - 60px }
+    padding-left: 10px
+
+  span[class^="icon-"]
+    display: inline-block
+    width: 30px
+    text-align: center
+
+  h1
+    margin: 0
+    font-size: 1em
+
+    a
+      width: 260px
+
+    span.text
+      width: $nav-width
+      text-indent: -5000px
+
+    +responds-to($bp3)
+      display: none
+
